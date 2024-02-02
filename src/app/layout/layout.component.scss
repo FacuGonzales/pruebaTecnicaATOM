@@ -1,0 +1,128 @@
+.home {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .header {
+  align-items: center;
+  background-color: var(--black);
+  display: flex;
+  height: 121px;
+  justify-content: space-around;
+  min-width: 1440px;
+  padding: 25px 129px;
+}
+
+.home .logo {
+  align-self: flex-start;
+  background-image: url(../../assets/img/logo@2x.png);
+  background-size: cover;
+  height: 70px;
+  width: 65px;
+}
+
+#botn-menu, #menu{
+  display: none;
+}
+
+.home .nav {
+  display: flex;
+}
+
+.home .botn-1 {
+  margin-left: 112px;
+}
+
+.home .botn-2 {
+  margin-left: 737px;
+}
+
+.home .option-navigation {
+  cursor: pointer;
+}
+
+.home .footer {
+  align-items: center;
+  background-color: var(--black);
+  display: flex;
+  height: 47px;
+  justify-content: flex-end;
+  margin-top: 234px;
+  padding: 0 697px;
+}
+
+
+@media screen and (max-width: 480px) {
+  .home {
+    width: 100%;
+  }
+
+  .home .header {
+    justify-content: space-between;
+    min-width: 0;
+    padding: 25px 0;
+    width: 100%;
+  }
+
+  .home .logo {
+    margin-left: 30px;
+  }
+
+
+  #botn-menu:not(:checked) ~ .nav {
+    display: none;
+  }
+
+  #botn-menu:checked ~ .nav {
+    display: block;
+  }
+
+  .home .botn-1, .home .botn-2 {
+    margin-left: 0;
+  }
+
+  #menu {
+    display: block;
+    color: var(--mustard);
+    font-family: var(--font-family-inter);
+    font-size: var(--font-size-l);
+    font-style: normal;
+    font-weight: 800;
+    margin-right: 30px;
+    z-index: 999;
+  }
+
+  .botn-close {
+    display: none;
+  }
+
+  #botn-menu:checked ~ label .botn-open {
+    display: none;
+  }
+
+  #botn-menu:checked ~ label .botn-close {
+    display: block;
+  }
+
+  .home .nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: var(--black);
+    padding-top: 5em;
+    padding-right: 4em;
+    width: 100%;
+    text-align: right;
+  }
+
+  .home .botn-1, .home .botn-2 {
+    margin: 35px 0 35px;
+  }
+
+  .home .option-navigation {
+    font-size: var(--font-size-l);
+  }
+
+}
