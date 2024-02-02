@@ -1,0 +1,34 @@
+
+<ng-container *ngIf="!errorGetData else errorContainer;">
+  <div class="texto-principal">
+    <h1 class="title valign-text-bottom">{{textsObject.title}}</h1>
+  </div>
+  <div class="texto-secundario-tex-home">
+    <p class="texto-secundario-tex-texto-secundario-tex">{{textsObject.text_secondary}}</p>
+  </div>
+
+  <div class="componente-informativo">
+    <img class="caritas-negras" src="{{textsObject.icon}}" alt="caritas negras" />
+
+    <div class="flex-col">
+      <div class="texto-sobre-otro-elemento-flex-col">
+        <div class="texto-sobre-otro-elemento-texto-sobre-otro-elemento valign-text-middle">
+          {{textsObject.text_info}}
+        </div>
+      </div>
+
+      <div class="botn-7">
+        <div class="botn-8 valign-text-middle">{{textsObject.text_button}}</div>
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-template #errorContainer>
+  <div class="texto-principal">
+    <h1 class="title valign-text-bottom">{{errorMessage.title}}</h1>
+  </div>
+  <div class="texto-secundario-tex-home">
+    <p class="texto-secundario-tex-texto-secundario-tex">{{errorMessage.text_secondary}}</p>
+  </div>
+</ng-template>
