@@ -84,3 +84,31 @@
   line-height: normal;
   text-align: center;
 }
+
+
+@media screen and (max-width: 480px) {
+  .componente-informativo {
+    flex-direction: column;
+    gap: 60px;
+    height: 480px;
+    min-width: 0;
+    margin: 60px 20px;
+    padding: 40px 40px;
+    width: 90%;
+  }
+
+  .texto-principal {
+    align-items: center;
+    margin-top: 85px;
+  }
+
+  .texto-secundario-tex-home {
+    display: block;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+
+  .texto-secundario-tex-texto-secundario-tex {
+    width: 90%;
+  }
+}

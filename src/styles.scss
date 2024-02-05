@@ -4,6 +4,9 @@
 
 * {
   box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 
@@ -22,8 +25,10 @@
 
 
 body {
-  margin: 0;
   background-color: var(--white);
+  margin: 0;
+  max-height: 100vh
+
 }
 
 .inter-medium-white-16px {
@@ -39,3 +44,8 @@ body {
   justify-content: center;
 }
 
+@media screen and (max-width: 480px) {
+  .container-center-horizontal {
+    width: 100%;
+  }
+}
