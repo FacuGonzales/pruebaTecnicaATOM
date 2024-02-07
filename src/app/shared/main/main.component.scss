@@ -85,13 +85,33 @@
   text-align: center;
 }
 
+@media screen and (max-width: 1440px) {
+  .texto-principal {
+    margin-top: 80px;
+  }
 
-@media screen and (max-width: 480px) {
+  .texto-secundario-tex-home {
+    margin-top: 20px;
+  }
+
+  .componente-informativo {
+    margin: 0 auto;
+    margin-top: 65px;
+    gap: 80px;//141px;
+    min-width: 0;
+    width: 95%;
+    justify-content: center;
+  }
+}
+
+
+
+
+@media screen and (max-width: 570px) {
   .componente-informativo {
     flex-direction: column;
     gap: 60px;
     height: 480px;
-    min-width: 0;
     margin: 60px 20px;
     padding: 40px 40px;
     width: 90%;
@@ -105,7 +125,7 @@
   .texto-secundario-tex-home {
     display: block;
     margin-left: 30px;
-    margin-top: 20px;
+
   }
 
   .texto-secundario-tex-texto-secundario-tex {

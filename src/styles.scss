@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
 @import url("https://fonts.googleapis.com/css?family=Inter:400,700,500");
+@import 'ngx-toastr/toastr';
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,9 @@
   --black: #000000;
   --white: #ffffff;
   --mustard: #f5b300;
+  --gray: #c1c1c1;
+  --table: #111313;
+  --table-opacity: #222323;
 
   --font-size-l: 36px;
   --font-size-m: 24px;
@@ -44,7 +48,43 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-width: 480px) {
+.loader {
+  animation: rotate 1s linear infinite;
+  border-radius: 50%;
+  height: 80px;
+  margin: 150px 0;
+  position: relative;
+  width: 80px;
+}
+
+.loader::before, .loader::after {
+  content: "";
+  animation: prixClipFix 2s linear infinite ;
+  border: 5px solid var(--black);
+  border-radius: 50%;
+  box-sizing: border-box;
+  inset: 0px;
+  position: absolute;
+}
+
+.loader::after {
+  border-color: var(--mustard);
+  inset: 8px;
+  transform: rotate3d(90, 90, 0, 180deg );
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg) }
+  100% { transform: rotate(360deg) }
+}
+
+@keyframes prixClipFix {
+  0% { clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0) }
+  50% { clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0) }
+  75%, 100% { clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%) }
+}
+
+@media screen and (max-width: 1440px) {
   .container-center-horizontal {
     width: 100%;
   }

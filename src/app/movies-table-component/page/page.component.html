@@ -1,1 +1,100 @@
-<p>page works!</p>
+<div class="container">
+  <div class="header-container">
+    <p class="botn-back" [routerLink]="['/']">Atrás</p>
+  </div>
+
+  <form [formGroup]="filtersForm" class="login">
+
+    <div class="filter-container">
+
+      <div class="filters type-filter">
+        <select name="select" class="input type" formControlName="type">
+          <option value="" selected>Seleccionar</option>
+          <option value="movie">Película</option>
+          <option value="series">Serie</option>
+          <option value="episode">Episodios</option>
+        </select>
+      </div>
+
+      <div class="filters title-filter">
+        <input type="text" class="input title" placeholder="Título" formControlName="title">
+      </div>
+
+      <div class="filters year-filter">
+        <input type="number" class="input years" placeholder="Año" formControlName="years">
+      </div>
+
+      <div class="filters id-filter">
+        <input type="text" class="input id" placeholder="Búsqueda por id" formControlName="id">
+      </div>
+    </div>
+
+    <div class="botn-container">
+      <button class="botn submmit" (click)="getData()"> Buscar </button>
+
+      <button class="botn clean" (click)="cleanFilters()"> Limpiar </button>
+    </div>
+
+  </form>
+
+  <ng-container *ngIf="data.length; else loadingOrErrorOrEmpty">
+
+    <div class="table-container">
+
+      <div class="data-table">
+        <thead>
+          <tr>
+            <th>Poster</th>
+            <th>Titulo</th>
+            <th>Tipo</th>
+            <th>Año</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let movie of data" >
+            <td>
+              <img src="{{movie.Poster}}" alt="">
+            </td>
+            <td><b>{{movie.Title}}</b></td>
+            <td>{{movie.Type}}</td>
+            <td>{{movie.Year}}</td>
+          </tr>
+        </tbody>
+      </div>
+
+      <div class="paginator">
+        <div class="list-items">
+          <select name="n-entries" id="n-entries" class="n-entries">
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+
+        <div class="pages">
+          <ul>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </ng-container>
+
+
+  <ng-template #loadingOrErrorOrEmpty>
+
+    <ng-container *ngIf="loading; else errorOrEmpty">
+      <span class="loader"></span>
+    </ng-container>
+
+    <ng-template #errorOrEmpty>
+      <p class="noData">{{error || 'Sin datos.'}}</p>
+    </ng-template>
+  </ng-template>
+</div>
