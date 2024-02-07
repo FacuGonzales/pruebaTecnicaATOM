@@ -6,7 +6,6 @@
   <form [formGroup]="filtersForm" class="login">
 
     <div class="filter-container">
-
       <div class="filters type-filter">
         <select name="select" class="input type" formControlName="type">
           <option value="" selected>Seleccionar</option>
@@ -31,7 +30,6 @@
 
     <div class="botn-container">
       <button class="botn submmit" (click)="getData()"> Buscar </button>
-
       <button class="botn clean" (click)="cleanFilters()"> Limpiar </button>
     </div>
 

@@ -76,9 +76,7 @@
     background-color: var(--black);
     display: flex;
     height: 47px;
-
     margin-top: 234px;
-    /* padding: 0 522px; */
     width: 100%;
   }
 
@@ -90,19 +88,14 @@
 }
 
 @media screen and (max-width: 570px) {
-
-
   .home .header {
     justify-content: space-between;
-    // min-width: 0;
     padding: 25px 0;
-    // width: 100%;
   }
 
   .home .logo {
     margin-left: 30px;
   }
-
 
   #botn-menu:not(:checked) ~ .nav {
     display: none;

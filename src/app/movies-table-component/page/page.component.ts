@@ -34,7 +34,6 @@ export class PageComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.getData();
     this.formChanges();
   }
 
@@ -51,7 +50,7 @@ export class PageComponent implements OnInit, OnDestroy {
 
     data.id = this.filtersForm.get('id')?.value ? this.filtersForm.get('id')?.value : '';
     data.year = this.filtersForm.get('years')?.value ? this.filtersForm.get('years')?.value : '';
-    data.title = this.filtersForm.get('title')?.value ? this.filtersForm.get('title')?.value : 'cars';
+    data.title = this.filtersForm.get('title')?.value ? this.filtersForm.get('title')?.value : '';
     data.type = this.filtersForm.get('type')?.value ? this.filtersForm.get('type')?.value : '';
 
     if(data.years && data.year.toString().length != 4) return this.alertMessage.warning('Debes ingresar 4 digtos en el año.');

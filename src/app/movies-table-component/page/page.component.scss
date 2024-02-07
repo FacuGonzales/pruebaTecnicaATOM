@@ -183,13 +183,13 @@
 }
 
 .table-container .paginator ul {
-  list-style: none;
   display: flex;
-  gap: 10px;
   flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  list-style: none;
   margin: 0 auto;
   width: 100%;
-  justify-content: center;
 }
 
 .table-container .paginator ul li.active{

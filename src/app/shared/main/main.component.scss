@@ -1,11 +1,10 @@
-
 .texto-principal {
   align-items: flex-start;
   margin-top: 119px;
 }
 
 .title {
-  color: #f5b300;
+  color: var(--mustard);
   font-family: var(--font-family-inter);
   font-size: var(--font-size-l);
   font-weight: 700;
@@ -22,7 +21,7 @@
 }
 
 .texto-secundario-tex-texto-secundario-tex {
-  color: #7d7d7d;
+  color: var(--dark-gray);
   font-family: var(--font-family-inter);
   font-size: var(--font-size-m);
   font-weight: 400;
@@ -34,9 +33,9 @@
 
 .componente-informativo {
   align-items: center;
-  background-color: #f5b300;
+  background-color: var(--mustard);
   border-radius: 20px;
-  box-shadow: 0px 4px 20px #a07500;
+  box-shadow: 0px 4px 20px var(--mustard-opacity);
   display: flex;
   gap: 175px;
   height: 301px;
@@ -97,15 +96,12 @@
   .componente-informativo {
     margin: 0 auto;
     margin-top: 65px;
-    gap: 80px;//141px;
+    gap: 80px;
     min-width: 0;
     width: 95%;
     justify-content: center;
   }
 }
-
-
-
 
 @media screen and (max-width: 570px) {
   .componente-informativo {
@@ -125,7 +121,6 @@
   .texto-secundario-tex-home {
     display: block;
     margin-left: 30px;
-
   }
 
   .texto-secundario-tex-texto-secundario-tex {
