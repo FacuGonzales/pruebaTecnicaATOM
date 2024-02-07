@@ -10,7 +10,6 @@
   padding: 0;
 }
 
-
 :root {
   --black: #000000;
   --white: #ffffff;
@@ -27,12 +26,10 @@
   --font-family-inter: "Inter", Helvetica;
 }
 
-
 body {
   background-color: var(--white);
   margin: 0;
-  max-height: 100vh
-
+  max-height: 100vh;
 }
 
 .inter-medium-white-16px {
