@@ -96,6 +96,21 @@
   width: 30%;
 }
 
+.header-table {
+  align-items: center;
+  background-color: var(--table);
+  border-radius: 10px;
+  display: flex;
+  height: 70px;
+  justify-content: space-around;
+  margin: 50px auto 0;
+  padding: 50px 0px;
+  width: 80%;
+}
+
+.activeOrder {
+  background-color: var(--mustard);
+}
 
 .table-container {
   background-color: var(--table);
@@ -104,7 +119,8 @@
   font-family: var(--font-family-inter);
   font-size: var(--font-size-m);
   font-weight: 800;
-  margin: 50px auto;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .table-container .data-table {
@@ -158,42 +174,30 @@
   width: 110px
 }
 
-
 .table-container .paginator {
   align-items: baseline;
   display: flex;
   margin: 15px;
   padding: 20px;
-
+  width: 95%
 }
 
-.table-container .paginator .list-items {
-  width: 75%;
-}
-
-.table-container .paginator .pages {
-  margin-left: auto;
-  margin-right: 0;
-  width: 25%;
-}
-
-.table-container .paginator .pages ul {
-  align-items: baseline;
+.table-container .paginator ul {
+  list-style: none;
   display: flex;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 100%;
+  justify-content: center;
 }
 
-.table-container .paginator .pages ul li {
-  display: inline-block;
-  margin: 0 8px;
+.table-container .paginator ul li.active{
+  background-color: var(--white);
+  padding: 10px;
 }
 
-.table-container .paginator .list-items .n-entries,
-.table-container .paginator .pages ul li {
-  display: inline-block;
-  margin: 0 8px;
+.table-container .paginator ul li {
   background: transparent;
   border: 0;
   border-radius: 5px;
@@ -203,21 +207,10 @@
   font-family: var(--font-family-inter);
   font-size: var(--font-size-m);
   font-weight: 800;
-  padding: 15px;
-  width: 100%;
-}
-
-.table-container .paginator .list-items .n-entries {
-  background: var(--white);
   padding: 10px;
-  width: 12%;
 }
 
-.table-container .paginator .pages ul li.active {
-  background-color: var(--white);
-}
-
-.table-container .paginator .pages ul li:hover {
+.table-container .paginator ul li:hover {
   background-color: var(--white);
 }
 
@@ -235,6 +228,10 @@
   .container .header-container,
   .filter-container {
     width: 100%;
+  }
+
+  .header-table {
+    width: 80%;
   }
 
   .table-container {
@@ -269,6 +266,18 @@
   .year-filter,
   .id-filter {
     width: 80%;
+  }
+
+  .header-table {
+    margin: 40px auto 0;
+    padding: 15px 0px;
+    width: 95%;
+  }
+
+  .botn-by-title,
+  .botn-by-years {
+    font-weight: 500;
+    padding: 10px 5px;
   }
 
   .table-container {
