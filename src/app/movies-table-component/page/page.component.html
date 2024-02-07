@@ -39,6 +39,16 @@
 
   <ng-container *ngIf="data.length; else loadingOrErrorOrEmpty">
 
+    <div class="header-table">
+      <div class="order-by-title">
+        <button class="botn botn-by-title" [ngClass]="{'activeOrder' : orderByTitle}" (click)="orderBy('title')">Ordenar por título</button>
+      </div>
+
+      <div class="order-by-years">
+        <button class="botn botn-by-years" [ngClass]="{'activeOrder': orderByYears}" (click)="orderBy('year')">Ordenar por Año</button>
+      </div>
+    </div>
+
     <div class="table-container">
 
       <div class="data-table">
@@ -52,7 +62,7 @@
         </thead>
 
         <tbody>
-          <tr *ngFor="let movie of data" >
+          <tr *ngFor="let movie of data">
             <td>
               <img src="{{movie.Poster}}" alt="">
             </td>
@@ -64,23 +74,9 @@
       </div>
 
       <div class="paginator">
-        <div class="list-items">
-          <select name="n-entries" id="n-entries" class="n-entries">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-          </select>
-        </div>
-
-        <div class="pages">
-          <ul>
-            <li class="active">1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-          </ul>
-        </div>
+        <ul>
+          <li *ngFor="let item of array;index as i" [ngClass]="{'active': item == page}" (click)="goToPage(item)">{{item}}</li>
+        </ul>
       </div>
     </div>
 
